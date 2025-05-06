@@ -1,13 +1,18 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const isActive = (path: string) => {
+    return location.pathname === path ? "text-bakery-orange" : "";
   };
 
   return (
@@ -22,26 +27,26 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="font-medium hover:text-bakery-orange transition-colors">
+            <Link to="/" className={`font-medium hover:text-bakery-orange transition-colors ${isActive('/')}`}>
               Home
             </Link>
-            <Link to="/about" className="font-medium hover:text-bakery-orange transition-colors">
-              About
-            </Link>
-            <Link to="/products" className="font-medium hover:text-bakery-orange transition-colors">
+            <Link to="/products" className={`font-medium hover:text-bakery-orange transition-colors ${isActive('/products')}`}>
               Products
             </Link>
-            <Link to="/custom-order" className="font-medium hover:text-bakery-orange transition-colors">
+            <Link to="/custom-order" className={`font-medium hover:text-bakery-orange transition-colors ${isActive('/custom-order')}`}>
               Custom Orders
             </Link>
-            <Link to="/contact" className="font-medium hover:text-bakery-orange transition-colors">
+            <Link to="/contact" className={`font-medium hover:text-bakery-orange transition-colors ${isActive('/contact')}`}>
               Contact
+            </Link>
+            <Link to="/admin" className={`font-medium hover:text-bakery-orange transition-colors ${isActive('/admin')}`}>
+              Admin
             </Link>
           </nav>
 
           {/* Order Now Button */}
           <div className="hidden md:block">
-            <Link to="/contact" className="btn-primary">
+            <Link to="/products" className="btn-primary">
               Order Now
             </Link>
           </div>
@@ -62,22 +67,22 @@ const Navbar: React.FC = () => {
         {isOpen && (
           <div className="md:hidden pt-4 pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
-              <Link to="/" className="font-medium hover:text-bakery-orange transition-colors" onClick={toggleMenu}>
+              <Link to="/" className={`font-medium hover:text-bakery-orange transition-colors ${isActive('/')}`} onClick={toggleMenu}>
                 Home
               </Link>
-              <Link to="/about" className="font-medium hover:text-bakery-orange transition-colors" onClick={toggleMenu}>
-                About
-              </Link>
-              <Link to="/products" className="font-medium hover:text-bakery-orange transition-colors" onClick={toggleMenu}>
+              <Link to="/products" className={`font-medium hover:text-bakery-orange transition-colors ${isActive('/products')}`} onClick={toggleMenu}>
                 Products
               </Link>
-              <Link to="/custom-order" className="font-medium hover:text-bakery-orange transition-colors" onClick={toggleMenu}>
+              <Link to="/custom-order" className={`font-medium hover:text-bakery-orange transition-colors ${isActive('/custom-order')}`} onClick={toggleMenu}>
                 Custom Orders
               </Link>
-              <Link to="/contact" className="font-medium hover:text-bakery-orange transition-colors" onClick={toggleMenu}>
+              <Link to="/contact" className={`font-medium hover:text-bakery-orange transition-colors ${isActive('/contact')}`} onClick={toggleMenu}>
                 Contact
               </Link>
-              <Link to="/contact" className="btn-primary text-center" onClick={toggleMenu}>
+              <Link to="/admin" className={`font-medium hover:text-bakery-orange transition-colors ${isActive('/admin')}`} onClick={toggleMenu}>
+                Admin
+              </Link>
+              <Link to="/products" className="btn-primary text-center" onClick={toggleMenu}>
                 Order Now
               </Link>
             </div>
