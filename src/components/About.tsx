@@ -1,9 +1,6 @@
-
 import React from 'react';
-
 const About: React.FC = () => {
-  return (
-    <section id="about" className="section-padding bg-white">
+  return <section id="about" className="section-padding bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Our Sweet Story</h2>
@@ -14,11 +11,7 @@ const About: React.FC = () => {
           <div className="md:w-1/2 mb-8 md:mb-0">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 mx-auto bg-bakery-peach rounded-full overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1582562124811-c09040d0a901" 
-                  alt="Suprilicious Bakery" 
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Suprilicious Bakery" src="/lovable-uploads/027a8b25-e3f6-4ba9-983f-a27a6af9da0d.jpg" className="w-full h-full object-cover" />
               </div>
               <div className="absolute top-5 -right-4 w-32 h-32 bg-bakery-pink rounded-full"></div>
               <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-bakery-orange rounded-full opacity-20"></div>
@@ -54,8 +47,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;

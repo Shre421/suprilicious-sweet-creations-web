@@ -1,21 +1,14 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CakeSlice, Heart } from 'lucide-react';
-
 const CustomOrder: React.FC = () => {
-  return (
-    <section id="custom-order" className="section-padding bg-gradient-to-br from-bakery-peach to-bakery-pink">
+  return <section id="custom-order" className="section-padding bg-gradient-to-br from-bakery-peach to-bakery-pink">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <div className="relative">
               <div className="bg-white p-4 rounded-lg shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1582562124811-c09040d0a901" 
-                  alt="Custom cake design" 
-                  className="rounded-lg"
-                />
+                <img alt="Custom cake design" className="rounded-lg object-fill" src="/lovable-uploads/575d866a-c7cd-4af2-bc30-09b2dfdd8d21.jpg" />
               </div>
               <div className="absolute -bottom-5 -right-5 bg-white rounded-full p-3 shadow-lg">
                 <Heart size={24} className="text-bakery-orange" />
@@ -79,8 +72,6 @@ const CustomOrder: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CustomOrder;
