@@ -46,28 +46,28 @@ const ProductCategories: React.FC = () => {
     {
       title: "Cakes & Cheesecakes",
       description: "Custom celebration cakes and rich, creamy cheesecakes in various flavors.",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+      image: "/lovable-uploads/b5924dcb-8da9-4507-a699-3fbc976c4981.png",
       icon: <CakeSlice size={18} className="text-bakery-orange" />,
       link: "/products"
     },
     {
       title: "Jar & Specialty Desserts",
       description: "Layered jar desserts and unique treats perfect for any occasion.",
-      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901",
+      image: "https://images.unsplash.com/photo-1603532648955-039310d9ed75",
       icon: <CakeSlice size={18} className="text-bakery-orange" />,
       link: "/products"
     },
     {
       title: "Brownies & Bars",
       description: "Rich, fudgy brownies and gourmet bars made with premium ingredients.",
-      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
+      image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c",
       icon: <CakeSlice size={18} className="text-bakery-orange" />,
       link: "/products"
     },
     {
       title: "Cookies & Donuts",
       description: "Freshly baked cookies and soft, fluffy donuts in various flavors.",
-      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+      image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e",
       icon: <Cookie size={18} className="text-bakery-orange" />,
       link: "/products"
     }
