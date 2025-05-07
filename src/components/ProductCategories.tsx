@@ -46,7 +46,7 @@ const ProductCategories: React.FC = () => {
     {
       title: "Cakes & Cheesecakes",
       description: "Custom celebration cakes and rich, creamy cheesecakes in various flavors.",
-      image: "/lovable-uploads/b5924dcb-8da9-4507-a699-3fbc976c4981.png",
+      image: "/lovable-uploads/4c89b735-7adf-46fb-9b7e-0d2d2075d2cd.png",
       icon: <CakeSlice size={18} className="text-bakery-orange" />,
       link: "/products"
     },
