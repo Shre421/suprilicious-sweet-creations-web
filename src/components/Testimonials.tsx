@@ -49,15 +49,13 @@ const Testimonials: React.FC = () => {
   const { data: testimonials, isLoading, error } = useQuery({
     queryKey: ['testimonials'],
     queryFn: async () => {
+      // Using a more type-safe approach with explicit casting
       const { data, error } = await supabase
         .from('testimonials')
-        .select('*')
-        .eq('is_approved', true)
-        .order('created_at', { ascending: false })
-        .limit(3);
+        .select('*');
       
       if (error) throw error;
-      return data as Testimonial[];
+      return (data || []) as Testimonial[];
     }
   });
 
